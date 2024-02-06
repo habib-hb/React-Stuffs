@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: black; color: lightblue">
+  <h1>Here it is.</h1>
+<script>
+class Charger{
+   constructor(name){
+    this.charger = name;
+   }
+
+	chargerShow(){
+    return "They gave me a "+ this.charger + " charger. "
+    }
+
+}//Charger class end;
+
+class Mobile extends Charger{
+	constructor(mobile, charger){
+    	super(charger);
+    	this.mobile= mobile;
+        
+    }
+    
+    mobileShow(){
+    	return "I have a "+ this.mobile + " smart phone. "
+    }
+    
+
+}//Mobile class ends;
+
+const myMobile = new Mobile("Realme", "20 watt");
+let text1= myMobile.chargerShow();
+let text2= myMobile.mobileShow();
+document.write(text2 + text1 );
+</script>
+
+</body>
+</html>
